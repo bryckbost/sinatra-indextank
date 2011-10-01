@@ -1,0 +1,26 @@
+h1. sinatra-indextank
+
+Extends Sinatra with an extension method for dealing with IndexTank.
+
+h2. Installation
+
+Install it with gem:
+
+@$ gem install sinatra-indextank@
+
+Now we can use it an example application.
+
+<pre><code>require 'sinatra'
+require 'sinatra/indextank'
+
+# Obtain an IndexTank client using your private api url
+# Or, specify the INDEXTANK_API_URL as an environment variable
+set :indextank, 'http://_your_private_api_url@rthr.api.indextank.com'
+
+# At this point, you can access the IndexTank::Client object using the 'indextank' helper:
+
+get '/search' do
+  @results = indextank.indexes('idx').search(params[:q])
+end
+  </code>
+</pre>
