@@ -16,20 +16,15 @@ module Sinatra
     end
 
     def indextank
-      synchronize do
-        @indextank ||= (
-          client = IndexTank::Client.new(indextank_url)
-          client
-        )
-      end
+      synchronize { @indextank ||= IndexTank::Client.new(indextank_url) }
     end
 
     protected
-      def self.registered(app)
-        app.set :indextank_url, ENV['INDEXTANK_API_URL']
-        app.helpers IndexTankHelper
-      end
-
+    def self.registered(app)
+      app.set :indextank_url, ENV['INDEXTANK_API_URL']
+      app.helpers IndexTankHelper
+    end
   end
+
   register IndexTankExtension
 end

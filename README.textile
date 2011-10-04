@@ -15,7 +15,7 @@ require 'sinatra/indextank'
 
 # Obtain an IndexTank client using your private api url
 # Or, specify the INDEXTANK_API_URL as an environment variable
-set :indextank, 'http://_your_private_api_url@rthr.api.indextank.com'
+set :indextank, 'http://_your_private_api_url@api.indextank.com'
 
 # At this point, you can access the IndexTank::Client object using the 'indextank' helper:
 
