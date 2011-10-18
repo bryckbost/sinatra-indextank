@@ -4,7 +4,7 @@ require 'indextank'
 module Sinatra
   module IndexTankHelper
     def indextank
-      options.indextank
+      settings.indextank
     end
   end
 
