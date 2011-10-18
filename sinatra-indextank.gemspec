@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = "sinatra-indextank"
-  s.version     = "1.0.0"
+  s.version     = "1.1.0"
   s.authors     = ["Brian Ryckbost"]
   s.email       = ["brian@collectiveidea.com"]
   s.homepage    = ""
